@@ -1,0 +1,17 @@
+tanulasi rata (learning rate)- alpha
+new_v = old_v + alpha * (new_estimate-old_v)
+állapotok száma x operátorok száma méretű null mátrix
+act: lépés választás
+[0-1] epszilon kiválasztása, eszerint kerül kiválasztásra egy lépés (exploration - exploitation)
+q_tábla adott állapot-operátor párhoz (mátrixban állapot egy sort jelent) argmax - kiválasztja a maximális érték indexét
+új tudás hozzáadása: egész számmal sorsolunk 0 - (n-1) -ig
+learn: q_tábla frissítésére
+gamma: arány, mennyire számít a jutalmak értéke
+q_st,at = q_st,at + alpha(r + gamma max a[s,a] - q_st,at)
+old_value = q_table[state][action]
+new_estimate = reward + gamma * max(q_table[new_state])
+elég próbálkozás után megfelelő lépéseket tesz.
+Miért jó a q_tábla a többi tanulással szemben?
+ha a játék komplexebb, és nem lehet egy keresőfával megoldani(túl nagy az összeállítás)
+megerősítéses tanulás
+felülbecslés: soha elő nem forduló állapotokhoz
